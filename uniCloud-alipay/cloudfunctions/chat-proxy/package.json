@@ -1,0 +1,7 @@
+{
+  "name": "chat-proxy",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

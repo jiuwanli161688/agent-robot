@@ -1,0 +1,27 @@
+{
+  "DEFAULT_MODEL_KEY": "MiniMax-M2.7-free",
+  "MODELS": {
+    "MiniMax-M2.7-free": {
+      "SCNET_API_KEY": "sk-t8z97KrIz0I86HEp4pKFaGqwfn2xLCDdvqtqgWLzbJrrT4yG",
+      "SCNET_URL": "https://www.dmxapi.cn/v1/chat/completions",
+      "SCNET_MODEL_NAME": "MiniMax-M2.7-free"
+    },
+    "glm-5.1-free": {
+      "SCNET_API_KEY": "sk-t8z97KrIz0I86HEp4pKFaGqwfn2xLCDdvqtqgWLzbJrrT4yG",
+      "SCNET_URL": "https://www.dmxapi.cn/v1/chat/completions",
+      "SCNET_MODEL_NAME": "glm-5.1-free"
+    },
+    "kimi-k2.6-free": {
+      "SCNET_API_KEY": "sk-t8z97KrIz0I86HEp4pKFaGqwfn2xLCDdvqtqgWLzbJrrT4yG",
+      "SCNET_URL": "https://www.dmxapi.cn/v1/chat/completions",
+      "SCNET_MODEL_NAME": "kimi-k2.6-free"
+    },
+    "kimi-k2.5-free": {
+      "SCNET_API_KEY": "sk-t8z97KrIz0I86HEp4pKFaGqwfn2xLCDdvqtqgWLzbJrrT4yG",
+      "SCNET_URL": "https://www.dmxapi.cn/v1/chat/completions",
+      "SCNET_MODEL_NAME": "kimi-k2.5-free"
+    }
+  },
+  "MAX_MESSAGES": 8,
+  "MAX_MESSAGE_LENGTH": 2000
+}
