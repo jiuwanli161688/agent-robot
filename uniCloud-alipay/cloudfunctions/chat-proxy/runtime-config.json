@@ -1,5 +1,5 @@
 {
-  "DEFAULT_MODEL_KEY": "MiniMax-M2.7-free",
+  "DEFAULT_MODEL_KEY": "kimi-k2.5-free",
   "MODELS": {
     "MiniMax-M2.7-free": {
       "SCNET_API_KEY": "sk-t8z97KrIz0I86HEp4pKFaGqwfn2xLCDdvqtqgWLzbJrrT4yG",
