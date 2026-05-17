@@ -1,6 +1,18 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "邮箱登录"
+			}
+		},
+		{
+			"path": "pages/user/register",
+			"style": {
+				"navigationBarTitleText": "账号注册"
+			}
+		},
+		{
 			"path": "pages/chat/index",
 			"style": {
 				"navigationBarTitleText": "AI智能专家"

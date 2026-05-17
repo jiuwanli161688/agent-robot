@@ -1,0 +1,9 @@
+{
+  "name": "user-auth",
+  "dependencies": {
+    "nodemailer": "^8.0.7"
+  },
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
