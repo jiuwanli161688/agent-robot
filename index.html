@@ -2,8 +2,39 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <title>AI智能专家</title>
+    <title>AI智能专家｜多行业 AI 对话助手（agent-robot）</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta
+      name="description"
+      content="AI智能专家（工程名 agent-robot）：基于 uni-app 与 uniCloud 的多行业 AI 对话助手，登录后可切换行业顾问角色，经云端 chat-proxy 转发至配置的上游大模型接口。机器可读说明见 /static/geo/project-facts.json 与 /static/llms.txt。"
+    />
+    <meta name="keywords" content="AI智能专家,agent-robot,uni-app,uniCloud,多角色对话,GEO,生成式引擎优化" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AI智能专家｜多行业 AI 对话助手" />
+    <meta
+      property="og:description"
+      content="基于 uni-app 与 uniCloud 的对话应用；对话由 chat-proxy 转发至已配置的上游 LLM API。结构化项目事实见 /static/geo/project-facts.json。"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="AI智能专家" />
+    <meta
+      name="twitter:description"
+      content="多行业 AI 对话助手；uni-app + uniCloud；详见 /static/geo/project-facts.json。"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI智能专家",
+        "alternateName": "agent-robot",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "description": "基于 uni-app 与 uniCloud 的多行业 AI 对话助手；用户在登录后可选行业角色，通过云端 chat-proxy 调用配置的上游大模型 HTTP 接口。",
+        "dateModified": "2026-05-16",
+        "isAccessibleForFree": true,
+        "featureList": "多行业顾问角色、Markdown 回复、GEO 内容顾问、uniCloud 云函数转发"
+      }
+    </script>
     <script>
       var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
         CSS.supports('top: constant(a)'))
@@ -11,7 +42,6 @@
         '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
         (coverSupport ? ', viewport-fit=cover' : '') + '" />')
     </script>
-    <title></title>
     <!--preload-links-->
     <!--app-context-->
   </head>

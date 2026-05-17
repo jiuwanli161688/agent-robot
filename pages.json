@@ -13,9 +13,33 @@
 			}
 		},
 		{
+			"path": "pages/user/forgot-password",
+			"style": {
+				"navigationBarTitleText": "忘记密码"
+			}
+		},
+		{
+			"path": "pages/user/center",
+			"style": {
+				"navigationBarTitleText": "用户中心"
+			}
+		},
+		{
 			"path": "pages/chat/index",
 			"style": {
 				"navigationBarTitleText": "AI智能专家"
+			}
+		},
+		{
+			"path": "pages/about/geo",
+			"style": {
+				"navigationBarTitleText": "应用说明（GEO）"
+			}
+		},
+		{
+			"path": "pages/subscriber/index",
+			"style": {
+				"navigationBarTitleText": "会员订阅"
 			}
 		}
 	],

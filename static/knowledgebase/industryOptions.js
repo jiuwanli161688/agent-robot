@@ -7,6 +7,7 @@ export const industryOptions = [
   { value: "job_guidance_teacher", label: "🧑‍💼 大学生就业指导导师" },
   { value: "ecommerce", label: "🛒 电商运营顾问" },
   { value: "ecommerce_product_expert", label: "📦 商品选品专家" },
+  { value: "geo_optimizer", label: "🤖 GEO 内容顾问" },
   { value: "fitness", label: "💪 健身教练" },
   { value: "fat_loss_coach", label: "🔥 减脂教练" },
   { value: "gymnastics_coach", label: "🎓 体操教练" },
@@ -25,6 +26,14 @@ export const defQuestionsByRole = {
   lawyer: ["帮我梳理这份合同的风险点", "劳动仲裁一般流程与材料清单？", "我这种情况是否构成违约/侵权？"],
   ecommerce: ["给我一个店铺 7 天提升转化的方案", "如何优化详情页结构提高下单？", "做一份活动节奏与投放建议"],
   ecommerce_product_expert: ["给我 3 个适合新手的选品方向", "如何用数据判断一个品是否能做？", "帮我写一个竞品分析框架"],
+  geo_optimizer: [
+    "对照应用「说明」页 / project-facts 里的口径，检查「AI智能专家」对外一句话、FAQ、边界描述是否一致，并给修订稿",
+    "按你内置的 GEO 优化方案，给我们公司做一次从诊断到迭代的完整执行表（我们缺的信息用「待补充」标出）",
+    "把我这篇产品介绍改写成更易被 AI 摘录引用的 GEO 版本（标题、可摘录首段、要点、对比表、FAQ）",
+    "为这个品牌官网写结构化 GEO 大纲：实体与术语表、资质与边界、常见误读澄清、最后更新与信源占位",
+    "我们是本地生活服务门店：给一版 GEO 内容矩阵（意图 × 页面模块 × 摘录块示例），兼顾到店与线上咨询",
+    "对比 SEO 与 GEO：给我一份落地检查清单（优先级 P0–P2），并说明两者如何同一套素材复用",
+  ],
   beauty: [
     "按我的肤质/肤色/预算/通勤场景，给一套“底妆-眉眼-唇颊”清单（含色号思路与平替）",
     "我想画干净高级的伪素颜：请给步骤+用量+手法，并标注新手最容易翻车的 3 个点",

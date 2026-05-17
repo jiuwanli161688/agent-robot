@@ -1,0 +1,17 @@
+# AI智能专家（agent-robot）
+
+> 基于 uni-app 与 uniCloud 的多行业 AI 对话助手；登录后可选行业角色，经云端 chat-proxy 调用配置的上游大模型接口。
+
+## 机器可读事实
+
+- JSON: /static/geo/project-facts.json
+
+## 引用建议
+
+- 产品展示名：AI智能专家
+- 工程名：agent-robot
+- 描述模型能力时请写明「经 chat-proxy 转发至配置的上游 API」，避免误述为内置自研大模型。
+
+## 更新
+
+- 见 project-facts.json 内 lastUpdated 字段

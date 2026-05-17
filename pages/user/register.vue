@@ -9,7 +9,7 @@
       </view>
 
       <input v-model.trim="form.username" class="input" placeholder="请输入用户名" />
-      <input v-model.trim="form.avatar" class="input" placeholder="头像地址（可选）" />
+      <!-- <input v-model.trim="form.avatar" class="input" placeholder="头像地址（可选）" /> -->
       <input v-model.trim="form.email" class="input" type="text" placeholder="请输入邮箱" />
 
       <view class="code-row">
@@ -36,6 +36,7 @@
 
 <script setup>
 import { computed, onBeforeUnmount, reactive, ref } from "vue";
+import { uploadAvatar } from "@/apis/file";
 import { registerByEmail, sendEmailCode } from "@/apis/user";
 
 const defaultAvatar = "https://dummyimage.com/200x200/edf2f7/94a3b8.png&text=Avatar";
@@ -79,10 +80,25 @@ const handleChooseAvatar = () => {
     count: 1,
     sizeType: ["compressed"],
     sourceType: ["album", "camera"],
-    success: (res) => {
+    success: async (res) => {
       const filePath = res?.tempFilePaths?.[0];
       if (!filePath) return;
-      form.avatar = filePath;
+
+      uni.showLoading({ title: "上传中..." });
+
+      try {
+        const uploadResult = await uploadAvatar(filePath);
+        if (uploadResult?.url) {
+          form.avatar = uploadResult.url;
+          uni.hideLoading();
+          uni.showToast({ title: "上传成功", icon: "success" });
+        } else {
+          throw new Error("上传失败");
+        }
+      } catch (error) {
+        uni.hideLoading();
+        uni.showToast({ title: "上传失败", icon: "none" });
+      }
     },
   });
 };
@@ -101,7 +117,17 @@ const handleSendCode = async () => {
     }
     startCountdown();
   } catch (error) {
-    toast(error?.message || "验证码发送失败");
+    const errorMsg = error?.message || "验证码发送失败";
+    if (errorMsg.includes("已注册")) {
+      uni.showModal({
+        title: "提示",
+        content: "该邮箱已注册，是否前往登录？",
+        confirmText: "去登录",
+        success: () => goLogin()
+      });
+    } else {
+      toast(errorMsg);
+    }
   } finally {
     isCodeSending.value = false;
   }

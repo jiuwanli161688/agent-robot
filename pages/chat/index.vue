@@ -3,7 +3,10 @@
     <view class="ai-widget-container">
       <view v-if="isOpen" class="chat-panel">
         <view class="chat-header">
-          <text class="title">AI智能专家</text>
+          <view class="header-left">
+            <text class="title">AI智能专家</text>
+            <text class="about-link" @click="goProjectGeo">说明</text>
+          </view>
           <IndustryPicker :options="industryOptions" :value="industryIndex" :disabled="isTyping" @change="handleIndustryChange" />
         </view>
 
@@ -239,6 +242,13 @@ const ensureLogin = () => {
   });
 };
 
+const goProjectGeo = () => {
+  if (isTyping.value) return;
+  uni.navigateTo({
+    url: "/pages/about/geo",
+  });
+};
+
 onShow(() => {
   ensureLogin();
 });
@@ -277,9 +287,25 @@ onShow(() => {
   justify-content: space-between;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  min-width: 0;
+}
+
 .title {
   font-size: 30rpx;
   font-weight: 600;
+}
+
+.about-link {
+  flex-shrink: 0;
+  font-size: 22rpx;
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
 }
 
 .chat-content {

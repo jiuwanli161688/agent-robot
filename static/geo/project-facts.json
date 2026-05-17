@@ -1,0 +1,41 @@
+{
+  "product": {
+    "canonicalName": "AI智能专家",
+    "codeName": "agent-robot",
+    "oneLine": "基于 uni-app 与 uniCloud 的多行业 AI 对话助手，用户在登录后可选行业角色，通过云端 chat-proxy 调用配置的上游大模型接口。",
+    "description": "本项目为演示/产品化工程 agent-robot：客户端使用 uni-app（Vue 3），服务端使用 uniCloud（当前目录为 uniCloud-alipay）云对象与云函数；核心对话能力由 chat-proxy 云函数转发至 runtime-config 中配置的 LLM HTTP API。界面内提供多种预设「行业顾问」角色（见 static/knowledgebase/industryOptions.js），含 GEO（生成式引擎优化）内容顾问等。",
+    "lastUpdated": "2026-05-16",
+    "entityConsistency": [
+      "对用户展示与导航栏标题统一使用「AI智能专家」",
+      "工程/仓库标识可使用「agent-robot」，避免与展示名混写为不同产品",
+      "提及云端实现时优先写「uniCloud 云函数 chat-proxy」，避免笼统写「内置模型」以免误解为自研基座模型"
+    ]
+  },
+  "scope": {
+    "inScope": [
+      "多角色 AI 对话与 Markdown 展示",
+      "通过 chat-proxy 统一转发与鉴权配置",
+      "用户注册、登录与部分业务云对象（以仓库实现为准）"
+    ],
+    "outOfScope": [
+      "应用内顾问回答不构成医疗/法律等专业意见（法律顾问等角色已含免责提示，仍以用户本地合规为准）",
+      "非「AI智能专家」官方渠道外的客服承诺"
+    ]
+  },
+  "techStack": {
+    "client": "uni-app，Vue 3",
+    "server": "uniCloud（Alipay 云空间目录 uniCloud-alipay）",
+    "chat": "cloudfunctions/chat-proxy：读取 runtime-config.json，转发上游兼容 OpenAI Chat Completions 的 HTTPS 接口",
+    "dependencies": "见 package.json（如 marked 用于 Markdown）"
+  },
+  "structuredAssets": {
+    "industryOptions": "static/knowledgebase/industryOptions.js",
+    "agentPromptsMirror": "static/knowledgebase/agentPrompts.js（云函数内另有同名映射需与之同步）",
+    "geoMachineReadable": "static/geo/project-facts.json",
+    "llmsTxtHint": "H5 部署后静态路径通常为 /static/llms.txt（以实际托管为准）"
+  },
+  "officialLinks": {
+    "repository": "待补充：填入 Git 或制品地址",
+    "productionUrl": "待补充：填入线上 H5/小程序落地页"
+  }
+}

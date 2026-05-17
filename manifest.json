@@ -1,7 +1,7 @@
 {
     "name" : "agent-robot",
     "appid" : "__UNI__F19DA9D",
-    "description" : "",
+    "description" : "AI智能专家：基于 uni-app 与 uniCloud 的多行业 AI 对话助手，云端 chat-proxy 转发至已配置的上游大模型接口。（工程名 agent-robot）",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,

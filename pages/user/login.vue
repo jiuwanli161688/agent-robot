@@ -10,8 +10,11 @@
       </button>
 
       <view class="footer">
-        <text>还没有账号？</text>
-        <text class="link" @click="goRegister">去注册</text>
+        <view class="footer-left">
+          <text>还没有账号？</text>
+          <text class="link" @click="goRegister">去注册</text>
+        </view>
+        <text class="link footer-right" @click="goForgotPassword">忘记密码</text>
       </view>
     </view>
   </view>
@@ -68,6 +71,10 @@ const handleLogin = async () => {
 
 const goRegister = () => {
   uni.navigateTo({ url: "/pages/user/register" });
+};
+
+const goForgotPassword = () => {
+  uni.navigateTo({ url: "/pages/user/forgot-password" });
 };
 
 onShow(() => {
@@ -128,13 +135,33 @@ onShow(() => {
 
 .footer {
   margin-top: 24rpx;
-  text-align: center;
-  color: #64748b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
   font-size: 26rpx;
+  color: #64748b;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.footer-right {
+  flex-shrink: 0;
 }
 
 .link {
   margin-left: 8rpx;
   color: #2563eb;
+}
+
+.footer-right.link {
+  margin-left: 0;
 }
 </style>
